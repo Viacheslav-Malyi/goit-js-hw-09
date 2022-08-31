@@ -9,6 +9,8 @@ const PROMPT_DELAY = 1000;
 let isActive = false;
 let intervalId = null;
 
+btnStop.setAttribute('disabled', true);
+
 function StartRandomColor() {
   if (isActive) {
     return;
@@ -17,11 +19,15 @@ function StartRandomColor() {
   intervalId = setInterval(() => {
     body.style.backgroundColor = getRandomHexColor();
   }, PROMPT_DELAY);
+  btnStart.setAttribute('disabled', true);
+  btnStart.removeAttribute('disabled');
 }
 
 function StopRandomColor() {
   isActive = false;
   clearInterval(intervalId);
+  btnStop.setAttribute('disabled', true);
+  btnStart.removeAttribute('disabled');
 }
 
 function getRandomHexColor() {
