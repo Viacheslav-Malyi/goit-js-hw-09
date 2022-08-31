@@ -17,6 +17,10 @@ const { dateInput, startBtn, days, hours, minutes, seconds } = link;
 startBtn.addEventListener('click', startCountdown);
 startBtn.setAttribute('disabled', true);
 
+let intevalId = null;
+let countdownTimer = null;
+let currentDate = null;
+
 function startCountdown() {
   intevalId = setInterval(() => {
     const currentDate = Date.now();
