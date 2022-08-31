@@ -20,7 +20,7 @@ function StartRandomColor() {
     body.style.backgroundColor = getRandomHexColor();
   }, PROMPT_DELAY);
   btnStart.setAttribute('disabled', true);
-  btnStart.removeAttribute('disabled');
+  btnStop.removeAttribute('disabled');
 }
 
 function StopRandomColor() {
