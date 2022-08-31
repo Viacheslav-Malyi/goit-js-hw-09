@@ -7,6 +7,7 @@ btnStop.addEventListener('click', StopRandomColor);
 
 const PROMPT_DELAY = 1000;
 let isActive = false;
+let intervalId = null;
 
 function StartRandomColor() {
   if (isActive) {
